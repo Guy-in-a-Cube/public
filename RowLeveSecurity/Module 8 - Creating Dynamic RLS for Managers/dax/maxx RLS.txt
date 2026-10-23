@@ -1,0 +1,14 @@
+
+
+IF (
+            MAXX(
+                FILTER (
+                    Salesperson,
+                    Salesperson[Email] = USERPRINCIPALNAME()
+                        ),Salesperson[Is Salesperson]
+                
+            ) = 1,
+                               Salesperson[Email] = USERPRINCIPALNAME(),TRUE
+            
+        )
+
